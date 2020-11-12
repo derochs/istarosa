@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "ISTAROSA INT'L CO., LTD"
+theme = "istarosa"
+
+[[menu.main]]
+  name = "Products"
+  url = "/products"
+[[menu.main]]
+  name = "News"
+  url = "/news"
+[[menu.main]]
+  name = "About"
+  url = "/about"
+
+[[menu.footer]]
+  name = "About"
+  url = "/about"
