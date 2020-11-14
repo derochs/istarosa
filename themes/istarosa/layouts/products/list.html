@@ -2,17 +2,14 @@
 <div class="container">
 	<div class="section">
 		<div class="content">
-			{{ $cols := 4 }}
-			{{ $page_total := len .Pages }}
-
-			<div class="columns">
+			<div class="columns is-mobile is-multiline">
 			{{ range $i, $e:= .Pages.ByDate.Reverse }}
-				<div class="column is-one-quarter">
+				<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product">
 					<a href="{{ .Permalink }}">
 						<div class="product-container">
 							<figure class="image">
 							{{ with .Params.images }}
-								<img src="{{ index . 0 }}" width="75%">
+								<img src="{{ index . 0 }}">
 							{{ end }}
 							</figure>
 							<span class="tag is-black">No. {{ .Params.itemno }}</span>

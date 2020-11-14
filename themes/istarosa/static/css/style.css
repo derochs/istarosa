@@ -18,9 +18,17 @@ main {
 }
 
 .navbar-item img {
-	max-height: 100px !important;
+	max-height: 200px !important;
 }
 
-.product-container .image {
-	margin-bottom: 0 !important;
+.product-container img {
+	width: 100% !important;	
+}
+
+.product {
+	margin-top: auto;
+}
+
+#contact-button {
+	
 }

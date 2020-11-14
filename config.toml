@@ -16,6 +16,10 @@ theme = "istarosa"
   url = "/about"
   weight = 4
 
+[[menu.special]]
+  name = "Contact"
+  url = "mailto"
+
 [[menu.footer]]
   name = "About"
   url = "/about"

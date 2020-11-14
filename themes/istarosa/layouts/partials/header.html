@@ -28,6 +28,20 @@
 						<span class="icon">{{ .Pre }}</span>
 					</a>
 					{{ end }}
+					
+					{{ range .Site.Menus.special }}
+					<div class=navbar-item>
+						<field>
+							<div class="field">
+							    <p class="control">
+							      <a id="contact-button" class="button is-rounded">
+							        <span>{{ .Name }}</span>
+							      </a>
+							    </p>
+							  </div>
+						</field>
+					</div>
+					{{ end }}
 				</div>
 			</div>
 		</div>
