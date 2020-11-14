@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Products on ISTAROSA INT&#39;L CO., LTD</title>
+    <link>http://example.org/products/</link>
+    <description>Recent content in Products on ISTAROSA INT&#39;L CO., LTD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Nov 2020 00:53:36 +0100</lastBuildDate><atom:link href="http://example.org/products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anti-aging Gold Eye Mask</title>
+      <link>http://example.org/products/testb/</link>
+      <pubDate>Thu, 12 Nov 2020 00:58:07 +0100</pubDate>
+      
+      <guid>http://example.org/products/testb/</guid>
+      <description>Visibly de-puffs and lightens with a remarkable rejuvenating,firming effect that reduces appearance of fine lines and wrinkles. 24K Gold helps permeate the finest medical-grade ingredients including Argireline (Botox Alternative), and Recombinant Growth Factor, deep into the tender skin around the eyes. It imparts radiance to diminish puffiness and dark circles. Leaves eye velvety smooth, luminous, and youthful.
+Details:
+ Benefits: repairing eye bags, relaxing eye fatigue Appearance: golden 30.5g/pc Bag Size:19.</description>
+    </item>
+    
+    <item>
+      <title>Gold Hydrogel Neck Lift Mask</title>
+      <link>http://example.org/products/testa/</link>
+      <pubDate>Thu, 12 Nov 2020 00:58:04 +0100</pubDate>
+      
+      <guid>http://example.org/products/testa/</guid>
+      <description>24K Gold helps infuse moisturizing to condition and ensure a smooth, plump pout. This mask is an immediate, radiance enhancing, intense smooth out express treatment for lip contour. Dryness and fine lines diminish and the lips feel soft, rosy, and smoothed. Stimulates blood flow, promotes fullness, and re-hydrates for a long lasting effect. Protects the lips against UV light, and keeps the lips moist to prevent them from accelerated aging and emergence of dullness or fine lines.</description>
+    </item>
+    
+    <item>
+      <title>Neck Mask</title>
+      <link>http://example.org/products/neck-mask/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/products/neck-mask/</guid>
+      <description>Details:
+ Benefits: Preventative and maintenance treatment Appearance: transparent 81g/pc Bag Size: 25.8*17cm  </description>
+    </item>
+    
+  </channel>
+</rss>
