@@ -1,16 +1,22 @@
 {{ define "main" }}
-<section class="section">
-	<article>
-		<div class="columns is-centered">
-			<div class="column max-800px">
-				<h1 class="title is-2">{{ .Title }}</h1>
-				<div class="content">
-					{{ range $.Param "images"}}
-					<img src="{{ . }}">
-					{{ end }}
+<div class="container">
+	<section class="section">
+		<article>
+			<div class="columns is-centered">
+				<div class="column is-one-third">
+					
+					<div class="content">
+						{{ range $.Param "images"}}
+						<img src="{{ . }}">
+						{{ end }}
+					</div>
+				</div>
+				<div class="column">
+					<h1 class="title is-4">{{ .Title }}</h1>
+					{{ .Content }}
 				</div>
 			</div>
-		</div>
-	</article>
-</section>
+		</article>
+	</section>
+</div>
 {{ end }}

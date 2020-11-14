@@ -4,6 +4,9 @@ title = "ISTAROSA INT'L CO., LTD"
 theme = "istarosa"
 
 [[menu.main]]
+  name = "Home"
+  url = "/"
+[[menu.main]]
   name = "Products"
   url = "/products"
 [[menu.main]]
