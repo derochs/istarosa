@@ -21,3 +21,5 @@ fields:
   config: {}
   label: Product Images
   description: Upload product images
+pages:
+- content/products/neck-mask.md
