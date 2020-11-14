@@ -9,7 +9,7 @@ fields:
     min: 1
   description: Enter a title for the product
   label: Product Title
-- name: item_number
+- name: itemno
   type: text
   config:
     required: true
@@ -26,7 +26,7 @@ fields:
       format: markdown
   label: Product Description
   description: Enter a description for the product
-- name: product_images
+- name: images
   type: image_gallery
   config: {}
   label: Product Images
