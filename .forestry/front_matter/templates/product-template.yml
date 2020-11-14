@@ -16,16 +16,6 @@ fields:
     min: 1
   label: Item Number
   description: Enter the product item number
-- name: product_description
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Product Description
-  description: Enter a description for the product
 - name: images
   type: image_gallery
   config: {}
