@@ -5,10 +5,8 @@
 			{{ $cols := 4 }}
 			{{ $page_total := len .Pages }}
 
+			<div class="columns">
 			{{ range $i, $e:= .Pages.ByDate.Reverse }}
-				{{ if (eq (mod $i $cols) 0) }}
-					<div class="columns">
-				{{ end }}
 				<div class="column is-one-quarter">
 					<a href="{{ .Permalink }}">
 						<div class="product-container">
@@ -18,15 +16,12 @@
 							{{ end }}
 							</figure>
 							<span class="tag is-black">No. {{ .Params.itemno }}</span>
-							<h1 class="title is-6 has-text-centered">{{ .Title }}</h1>
+							<h1 class="title is-6">{{ .Title }}</h1>
 						</div>
 					</a>
 				</div>
-				{{ if (eq (mod $i $cols) (sub $cols 1)) }}
-					</div>
-				{{ end }}
-
 			{{ end }}
+			</div>
 		</div>
 	</div>
 </div>
