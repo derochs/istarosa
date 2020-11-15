@@ -1,18 +1,50 @@
 {{ define "main"}}
 <div class="section">
 	<div class="container">
+
+		<nav class="navbar" role="navigation">
+		<div class="container">
+			<div class="navbar-menu">
+				<div class="navbar-end">
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">
+          					{{ .Name }}
+        				</a>
+        				<div class="navbar-dropdown">
+							<a class="navbar-item">
+								1
+							</a>
+							<a class="navbar-item">
+								2
+							</a>
+							<a class="navbar-item">
+								3
+							</a>
+							<hr class="navbar-divider">
+							<a class="navbar-item">
+								4
+							</a>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
 		<div class="columns is-mobile is-multiline">
 		{{ range $i, $e:= .Pages.ByDate.Reverse }}
-			<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
-				<div class="box product">
-					<figure class="image is-128x128">
-						{{ with .Params.images }}
-							<img src="{{ index . 0 }}">
-						{{ end }}
-					</figure>
-					<span class="tag is-black">No. {{ .Params.itemno }}</span>
-					<h1 class="title is-6">{{ .Title }}</h1>
-				</div>
+			<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product-column">
+				<a href="{{ .Permalink }}">
+					<div class="box product">
+						<figure class="image is-128x128">
+							{{ with .Params.images }}
+								<img src="{{ index . 0 }}">
+							{{ end }}
+						</figure>
+						<span class="tag is-black">No. {{ .Params.itemno }}</span>
+						<h1 class="title is-6 product-title">{{ .Title }}</h1>
+					</div>
+				</a>
 			</div>
 		{{ end }}
 		</div>

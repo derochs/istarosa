@@ -12,7 +12,7 @@ theme = "istarosa"
   weight = 1
 [[menu.main]]
   name = "Products"
-  url = "/products"
+  url = "/products/skin-care"
   weight = 2
 [[menu.main]]
   name = "About"

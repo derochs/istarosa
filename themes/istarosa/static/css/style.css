@@ -25,15 +25,21 @@ main {
 	box-shadow: none;
 }
 
-.image {
+/* list.html */
+
+.product-column .image {
 	height: 250px !important;
 }
 
-.image img {
+.product-column .image img {
 	height: 100%;
 	object-fit: cover;
 }
 
-.column {
+.product-column {
 	display: flex;
+}
+
+.product-title {
+	padding: .5em 0;
 }
