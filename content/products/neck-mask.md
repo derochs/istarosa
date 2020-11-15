@@ -2,6 +2,7 @@
 images = ["/uploads/product_l_760261.jpg"]
 itemno = "MNH01"
 title = "Neck Mask"
+products = ["Skin Care"]
 
 +++
 **Details:**

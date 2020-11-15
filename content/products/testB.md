@@ -1,6 +1,8 @@
 ---
 title: "Anti-aging Gold Eye Mask"
 date: 2020-11-12T00:58:07+01:00
+products: 
+- "Skin Care"
 itemno: "MEG02"
 images:
 - "/images/product_l_760260.jpg"

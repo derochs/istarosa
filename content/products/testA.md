@@ -1,6 +1,8 @@
 ---
 title: "Gold Hydrogel Neck Lift Mask"
 date: 2020-11-12T00:58:04+01:00
+products: 
+- "Skin Care"
 itemno: "MLG01"
 images: 
 - "/images/product_l_760259.jpg"
