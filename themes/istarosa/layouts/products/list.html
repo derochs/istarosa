@@ -1,24 +1,20 @@
 {{ define "main"}}
-<div class="container">
-	<div class="section">
-		<div class="content">
-			<div class="columns is-mobile is-multiline">
-			{{ range $i, $e:= .Pages.ByDate.Reverse }}
-				<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product">
-					<a href="{{ .Permalink }}">
-						<div class="product-container">
-							<figure class="image">
-							{{ with .Params.images }}
-								<img src="{{ index . 0 }}">
-							{{ end }}
-							</figure>
-							<span class="tag is-black">No. {{ .Params.itemno }}</span>
-							<h1 class="title is-6">{{ .Title }}</h1>
-						</div>
-					</a>
+<div class="section">
+	<div class="container">
+		<div class="columns is-mobile is-multiline">
+		{{ range $i, $e:= .Pages.ByDate.Reverse }}
+			<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+				<div class="box product">
+					<figure class="image is-128x128">
+						{{ with .Params.images }}
+							<img src="{{ index . 0 }}">
+						{{ end }}
+					</figure>
+					<span class="tag is-black">No. {{ .Params.itemno }}</span>
+					<h1 class="title is-6">{{ .Title }}</h1>
 				</div>
-			{{ end }}
 			</div>
+		{{ end }}
 		</div>
 	</div>
 </div>

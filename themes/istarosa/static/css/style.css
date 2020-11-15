@@ -21,10 +21,19 @@ main {
 	max-height: 200px !important;
 }
 
-.product-container img {
-	width: 100% !important;	
+.box.product {
+	box-shadow: none;
 }
 
-.product {
-	margin-top: auto;
+.image {
+	height: 250px !important;
+}
+
+.image img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.column {
+	display: flex;
 }
