@@ -21,6 +21,3 @@ fields:
   config: {}
   label: Product Images
   description: Upload product images
-pages:
-- content/products/intense-lift-ice-eye-mask.md
-- content/products/neck-mask.md
