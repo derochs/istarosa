@@ -28,6 +28,15 @@ fields:
     required: true
     options:
     - Skin Care
+    - Coloring Hair Shampoo
+    - Hair Regrowth
+    - Dusty Forest Herb Extract Hair
+    - Natural Hair Color Cream
+    - Hair Repair
+    - Hand Sanitizer Spray
+    - Pet Shampoo
+    - Pet Mask
+    - Other Pet Care
     source:
       type: simple
       section: 

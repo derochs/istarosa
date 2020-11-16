@@ -19,6 +19,51 @@ sections:
   label: Skin Care
   create: all
   match: "**/*"
+- type: directory
+  path: content/products/coloring-hair-shampoo
+  label: Coloring Hair Shampoo
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/hair-regrowth
+  label: Hair Regrowth
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/dusty-forest-herb-extract-hair
+  label: Dusty Forest Herb Extract Hair
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/natural-hair-color-cream
+  label: Natural Hair Color Cream
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/hair-repair
+  label: Hair Repair
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/hand-sanitizer-spray
+  label: Hand Sanitizer Spray
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/pet-shampoo
+  label: Pet Shampoo
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/pet-mask
+  label: Pet Mask
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/products/other-pet-care
+  label: Other Pet Care
+  create: all
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
