@@ -12,7 +12,6 @@ sections:
 - type: document
   path: content/about.md
   label: About
-  match: "**/*"
 - type: heading
   label: Products
 - type: directory
