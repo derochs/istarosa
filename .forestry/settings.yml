@@ -4,17 +4,16 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: directory
-  path: content/products/skin-care
-  label: Skin Care
-  create: all
-  match: "**/*"
+- type: heading
+  label: Pages
 - type: document
   path: content/_index.md
   label: Home
-- type: directory
-  path: content/products
+- type: heading
   label: Products
+- type: directory
+  path: content/products/skin-care
+  label: Skin Care
   create: all
   match: "**/*"
 upload_dir: static/uploads
