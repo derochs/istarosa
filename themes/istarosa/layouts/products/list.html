@@ -3,33 +3,21 @@
 	<div class="container">
 
 		<nav class="navbar" role="navigation">
-		<div class="container">
-			<div class="navbar-menu">
-				<div class="navbar-end">
-					<div class="navbar-item has-dropdown is-hoverable">
-						<a class="navbar-link">
-          					{{ .Name }}
-        				</a>
-        				<div class="navbar-dropdown">
-							<a class="navbar-item">
-								1
-							</a>
-							<a class="navbar-item">
-								2
-							</a>
-							<a class="navbar-item">
-								3
-							</a>
-							<hr class="navbar-divider">
-							<a class="navbar-item">
-								4
-							</a>
+			<div class="container">
+				<div class="navbar-menu">
+					<div class="navbar-end">
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a class="navbar-link">
+	          					{{ .Name }}
+	        				</a>
+	        				<div class="navbar-dropdown">	
+    							<a class="navbar-item" href="{{ .Permalink }}">{{ .Title }}</a>
 							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 
 		<div class="columns is-mobile is-multiline">
 		{{ range $i, $e:= .Pages.ByDate.Reverse }}
