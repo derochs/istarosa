@@ -24,3 +24,7 @@ main {
 .product-container .image {
 	margin-bottom: 0 !important;
 }
+
+.main-hero {
+	background: linear-gradient(110deg, #fdcb3b, 60%, #ffed4b 60%) !important;
+}

@@ -1,9 +1,19 @@
 {{ define "main" }}
-<div class="container">
-	<div class="section">
-		<div class="content">
-			{{ .Content }}	
+<section class="hero is-medium main-hero">
+	<div class="hero-body">
+		<div class="container">
+			<h1 class="title">
+				ISTAROSA INT’L CO. LTD			
+			</h1>
+			<h2 class="subtitle">
+				Leading enterprise engaged in Beauty and Hair Care products
+			</h2>
 		</div>
 	</div>
-</div>
+</section>
+<section class="section">
+	<div class="container">
+		{{ .Content }}
+	</div>
+</section>
 {{ end }}

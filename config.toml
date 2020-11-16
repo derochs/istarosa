@@ -21,7 +21,7 @@ theme = "istarosa"
 
 [[menu.special]]
   name = "Contact"
-  url = "mailto"
+  url = "/contact"
 
 [[menu.footer]]
   name = "About"

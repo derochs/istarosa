@@ -43,3 +43,24 @@ main {
 .product-title {
 	padding: .5em 0;
 }
+
+/* main index.html */
+
+
+.main-hero {
+	background: 
+	linear-gradient(
+		125deg, 
+		#9d0b0b,
+		#9d0b0b 60%,
+		#da2d2d 60%,
+		#da2d2d 80%,
+		#eb8242 80%,
+		#eb8242 95%,
+		#f6da63 95%
+	);
+}
+
+.main-hero h1, .main-hero h2 {
+	color: white !important;
+}
