@@ -21,3 +21,5 @@ fields:
   config: {}
   label: Product Images
   description: Upload product images
+pages:
+- content/products/skin-care/anti-aging-24k-gold-collagen-hydrogel-facial-mask.md
