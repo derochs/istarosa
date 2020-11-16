@@ -2,7 +2,7 @@
 images = ["/uploads/product_l_824230.jpg"]
 itemno = "MFG01"
 title = "Anti-aging 24K Gold Collagen Hydrogel Facial Mask"
-
+products = ["Skin Care"]
 +++
 **Details:**
 
