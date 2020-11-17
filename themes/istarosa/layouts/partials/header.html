@@ -8,17 +8,18 @@
 			</div>
 			<div class="navbar-menu">
 				<div class="navbar-start">
+				</div>
+				<div class="navbar-end">
+				
 					{{ range .Site.Menus.main.ByWeight }}
 					<a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
-					{{ end }}
-				</div>
-				<div class="navbar-end">					
+					{{ end }}					
 					{{ range .Site.Menus.special }}
 					<div class=navbar-item>
 						<field>
 							<div class="field">
 							    <p class="control">
-							      <a id="contact-button" class="button is-rounded" href="{{ .URL }}">
+							      <a id="contact-button" class="button is-rounded special" href="{{ .URL }}">
 							        <span>{{ .Name }}</span>
 							      </a>
 							    </p>

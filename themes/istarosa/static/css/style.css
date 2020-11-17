@@ -64,3 +64,8 @@ main {
 .main-hero h1, .main-hero h2 {
 	color: white !important;
 }
+
+.button.special {
+	color: white;
+	background-color: #da2d2d ;
+}
