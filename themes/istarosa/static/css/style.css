@@ -28,12 +28,12 @@ main {
 /* list.html */
 
 .product-column .image {
-	height: 250px !important;
+	height: 300px !important;
 }
 
 .product-column .image img {
 	height: 100%;
-	object-fit: cover;
+	object-fit: cover ;
 }
 
 .product-column {
