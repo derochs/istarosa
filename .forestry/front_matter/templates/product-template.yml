@@ -13,7 +13,7 @@ fields:
   type: text
   config:
     required: false
-    min: 1
+    min: 0
   label: Item Number
   description: Enter the product item number
 - name: images
