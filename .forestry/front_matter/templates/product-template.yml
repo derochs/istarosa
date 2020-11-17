@@ -12,8 +12,8 @@ fields:
 - name: itemno
   type: text
   config:
-    required: true
-    min: 1
+    required: false
+    min: 0
   label: Item Number
   description: Enter the product item number
 - name: images
@@ -45,5 +45,6 @@ fields:
   label: Product Category
   description: Select the product category
 pages:
+- content/products/pet-shampoo/never-greasy-stinky-dog-shampoo.md
 - content/products/skin-care/anti-aging-24k-gold-collagen-hydrogel-facial-mask.md
 - content/products/skin-care/bamboo-charcoal-collagen-mask.md
