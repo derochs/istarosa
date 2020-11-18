@@ -1,33 +1,4 @@
 {{ define "main"}}
-<!--
-
-
-	{{ range $taxonomy_term, $taxonomy := .Site.Taxonomies.products }}
-		{{ $taxonomy_term }}
-	{{ end }}
-<section>
-    <ul id="all-taxonomies">
-        {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies.products }}
-            {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
-                <li><a href="{{ .Permalink }}">{{ $taxonomy_term }}</a>
-                    <ul>
-                        {{ range $key, $value := $taxonomy }}
-                            <li>{{ $value }}</li>
-                            <ul>
-                                {{ range $value.Pages }}
-                                    <li hugo-nav="{{ .RelPermalink}}">
-                                        <a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        {{ end }}
-                    </ul>
-                </li>
-            {{ end }}
-        {{ end }}
-    </ul>
-</section>
--->
 <div class="section">
 	<div class="container">
 		<div class="columns">
@@ -66,14 +37,6 @@
 				</aside>
 				</div>
 			</div>
-			<ul>
-				{{ with ($.Site.GetPage "products") }}
-					{{ range .Pages}}
-						
-					{{ end }}
-				{{ end }}
-			</ul>
-
 			<div class="column is-three-quarters">
 				<div class="columns is-mobile is-multiline">
 					{{ range $i, $e:= $.Pages.ByDate.Reverse }}
