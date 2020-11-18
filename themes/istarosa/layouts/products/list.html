@@ -11,9 +11,9 @@
 						{{ range $name, $taxonomy := .Site.Taxonomies.products }}
 					        {{ with $.Site.GetPage (printf "/products/%s" $name) }}
 					        	{{ if eq .Title $current }}
-					        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}</a></li>
+					        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}{{ $current }}</a></li>
 					        	{{ else }}
-					        		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+					        		<li><a href="{{ .Permalink }}">{{ .Title }}{{ $current }}</a></li>
 					        	{{ end }}
 					            
 					        {{ end }}
