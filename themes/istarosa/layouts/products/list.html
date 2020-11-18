@@ -1,4 +1,33 @@
 {{ define "main"}}
+<!--
+
+
+	{{ range $taxonomy_term, $taxonomy := .Site.Taxonomies.products }}
+		{{ $taxonomy_term }}
+	{{ end }}
+<section>
+    <ul id="all-taxonomies">
+        {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies.products }}
+            {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+                <li><a href="{{ .Permalink }}">{{ $taxonomy_term }}</a>
+                    <ul>
+                        {{ range $key, $value := $taxonomy }}
+                            <li>{{ $value }}</li>
+                            <ul>
+                                {{ range $value.Pages }}
+                                    <li hugo-nav="{{ .RelPermalink}}">
+                                        <a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
+                    </ul>
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+</section>
+-->
 <div class="section">
 	<div class="container">
 		<div class="columns">
@@ -7,42 +36,65 @@
 				<aside class="menu">
 					<p class="menu-label">Categories</p>
 					<ul class="menu-list">
-						{{ $current := .Page.Data.Term }}
-						{{ range $name, $taxonomy := .Site.Taxonomies.products }}
-					        {{ with $.Site.GetPage (printf "/products/%s" $name) }}
-					        	{{ if or (eq .Title $current ) (eq $name $current ) }}
-					        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}</a></li>
-					        	{{ else }}
-					        		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-					        	{{ end }}
-					            
-					        {{ end }}
-					    {{ end }}
+						{{ if eq .Page.Kind "term" }}
+							<li><a href="{{ ($.Site.GetPage "products").Permalink }}">All</a></li>
+							{{ $current := .Page.Data.Term }}
+							{{ range $name, $taxonomy := .Site.Taxonomies.products }}
+						        {{ with $.Site.GetPage (printf "/products/%s" $name) }}
+						        	{{ if or (eq .Title $current ) (eq $name $current ) }}
+						        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}</a></li>
+						        	{{ else }}
+						        		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+						        	{{ end }}
+						            
+						        {{ end }}
+						    {{ end }}
+					    {{ else }}
+							<li><a class="is-active" href="{{ ($.Site.GetPage "products").Permalink }}">All</a></li>
+							{{ $current := .Page.Data.Term }}
+							{{ range $name, $taxonomy := .Site.Taxonomies.products }}
+						        {{ with $.Site.GetPage (printf "/products/%s" $name) }}
+						        	{{ if or (eq .Title $current ) (eq $name $current ) }}
+						        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}</a></li>
+						        	{{ else }}
+						        		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+						        	{{ end }}
+						        {{ end }}
+						    {{ end }}
+						{{ end }}
 					</ul>
 				</aside>
 				</div>
 			</div>
+			<ul>
+				{{ with ($.Site.GetPage "products") }}
+					{{ range .Pages}}
+						
+					{{ end }}
+				{{ end }}
+			</ul>
+
 			<div class="column is-three-quarters">
 				<div class="columns is-mobile is-multiline">
-				{{ range $i, $e:= .Pages.ByDate.Reverse }}
-				<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product-column">
-					<a href="{{ .Permalink }}">
-						<div class="box product">
-							<figure class="image">
-								{{ with .Params.images }}
-									<img src="{{ index . 0 }}">
+					{{ range $i, $e:= $.Pages.ByDate.Reverse }}
+					<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product-column">
+						<a href="{{ .Permalink }}">
+							<div class="box product">
+								<figure class="image">
+									{{ with .Params.images }}
+										<img src="{{ index . 0 }}">
+									{{ end }}
+								</figure>
+								{{ if ne .Params.itemno ""}}
+								<span class="tag is-black">No. {{ .Params.itemno }}</span>
+								{{ else }}
+								<span class="tag is-black">No number</span>
 								{{ end }}
-							</figure>
-							{{ if ne .Params.itemno ""}}
-							<span class="tag is-black">No. {{ .Params.itemno }}</span>
-							{{ else }}
-							<span class="tag is-black">No number</span>
-							{{ end }}
-							<h1 class="title is-7 product-title">{{ .Title }}</h1>
-						</div>
-					</a>
-				</div>
-				{{ end }}
+								<h1 class="title is-7 product-title">{{ .Title }}</h1>
+							</div>
+						</a>
+					</div>
+					{{ end }}
 				</div>
 			</div>
 		</div>
