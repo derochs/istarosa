@@ -1,7 +1,6 @@
 {{ define "main"}}
 <div class="section">
 	<div class="container">
-		{{ $.Page.Data.Term }}
 		<div class="columns">
 			<div class="column">
 				<div>
@@ -11,10 +10,10 @@
 						{{ $current := .Page.Data.Term }}
 						{{ range $name, $taxonomy := .Site.Taxonomies.products }}
 					        {{ with $.Site.GetPage (printf "/products/%s" $name) }}
-					        	{{ if eq .Title $current }}
-					        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}{{ $current }}</a></li>
+					        	{{ if or (eq .Title $current ) (eq $name $current ) }}
+					        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}</a></li>
 					        	{{ else }}
-					        		<li><a href="{{ .Permalink }}">{{ .Title }}{{ $current }}</a></li>
+					        		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 					        	{{ end }}
 					            
 					        {{ end }}
