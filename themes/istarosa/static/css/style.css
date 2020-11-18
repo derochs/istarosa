@@ -18,7 +18,7 @@ main {
 }
 
 .navbar-item img {
-	max-height: 200px !important;
+	max-height: 150px !important;
 }
 
 .box.product {
@@ -28,12 +28,12 @@ main {
 /* list.html */
 
 .product-column .image {
-	height: 150px !important;
+	height: 200px !important;
 }
 
 .product-column .image img {
 	height: 100%;
-	object-fit: cover ;
+	object-fit: contain;
 }
 
 .product-column {
