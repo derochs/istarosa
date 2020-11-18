@@ -28,7 +28,7 @@ main {
 /* list.html */
 
 .product-column .image {
-	height: 300px !important;
+	height: 150px !important;
 }
 
 .product-column .image img {
@@ -42,6 +42,18 @@ main {
 
 .product-title {
 	padding: .5em 0;
+}
+
+.menu a.is-active {
+	background-color: #da2d2d !important;
+	color: white !important;
+}
+
+
+/* single product */
+
+.product figure {
+	margin-bottom: 2em !important;
 }
 
 /* main index.html */

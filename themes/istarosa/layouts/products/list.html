@@ -1,40 +1,50 @@
 {{ define "main"}}
 <div class="section">
 	<div class="container">
-
-		<nav class="navbar" role="navigation">
-			<div class="container">
-				<div class="navbar-menu">
-					<div class="navbar-end">
-						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-link">
-	          					{{ .Name }}
-	        				</a>
-	        				<div class="navbar-dropdown">	
-    							<a class="navbar-item" href="{{ .Permalink }}">{{ .Title }}</a>
-							</div>
-						</div>
-					</div>
+		<div class="columns">
+			<div class="column">
+				<div>
+				<aside class="menu">
+					<p class="menu-label">Categories</p>
+					<ul class="menu-list">
+						{{ $current := .Page.Data.Term }}
+						{{ range $name, $taxonomy := .Site.Taxonomies.products }}
+					        {{ with $.Site.GetPage (printf "/products/%s" $name) }}
+					        	{{ if eq .Title $current }}
+					        		<li><a class="is-active" href="{{ .Permalink }}">{{ .Title }}</a></li>
+					        	{{ else }}
+					        		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+					        	{{ end }}
+					            
+					        {{ end }}
+					    {{ end }}
+					</ul>
+				</aside>
 				</div>
 			</div>
-		</nav>
-
-		<div class="columns is-mobile is-multiline">
-		{{ range $i, $e:= .Pages.ByDate.Reverse }}
-			<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product-column">
-				<a href="{{ .Permalink }}">
-					<div class="box product">
-						<figure class="image">
-							{{ with .Params.images }}
-								<img src="{{ index . 0 }}">
+			<div class="column is-three-quarters">
+				<div class="columns is-mobile is-multiline">
+				{{ range $i, $e:= .Pages.ByDate.Reverse }}
+				<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product-column">
+					<a href="{{ .Permalink }}">
+						<div class="box product">
+							<figure class="image">
+								{{ with .Params.images }}
+									<img src="{{ index . 0 }}">
+								{{ end }}
+							</figure>
+							{{ if ne .Params.itemno ""}}
+							<span class="tag is-black">No. {{ .Params.itemno }}</span>
+							{{ else }}
+							<span class="tag is-black">No number</span>
 							{{ end }}
-						</figure>
-						<span class="tag is-black">No. {{ .Params.itemno }}</span>
-						<h1 class="title is-6 product-title">{{ .Title }}</h1>
-					</div>
-				</a>
+							<h1 class="title is-7 product-title">{{ .Title }}</h1>
+						</div>
+					</a>
+				</div>
+				{{ end }}
+				</div>
 			</div>
-		{{ end }}
 		</div>
 	</div>
 </div>
