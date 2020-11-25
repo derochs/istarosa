@@ -1,3 +1,48 @@
 {{ define "main" }}
-
+	{{ $products_url := (index .Site.Menus.main 1).URL }}
+	<div class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column">
+					<aside class="menu">
+						<p class="menu-label">Categories</p>
+						<ul class="menu-list">
+							<li><a href="{{ $products_url }}">All</a></li>
+							{{ $term := .Data.Term }}
+							{{ range .Site.Taxonomies.products }}
+								{{ if eq $term .Page.Title }}
+									<li><a class="is-active" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+								{{ else }}
+									<li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+								{{ end }}
+							{{ end }}
+						</ul>
+					</aside>
+				</div>
+				<div class="column is-three-quarters">
+					<div class="columns is-mobile is-multiline">
+						{{ range .Pages }}
+							<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product-column">
+								<a href="{{ .Permalink }}">
+									<div class="box product">
+										<figure class="image">
+											{{ with .Params.images }}
+												<img src="{{ index . 0 }}">
+											{{ end }}
+										</figure>
+										{{ if ne .Params.itemno ""}}
+											<span class="tag is-black">No. {{ .Params.itemno }}</span>
+										{{ else }}
+											<span class="tag is-black">No number</span>
+										{{ end }}
+										<h1 class="title is-7 product-title">{{ .Title }}</h1>
+									</div>
+								</a>
+							</div>
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 {{ end }}
