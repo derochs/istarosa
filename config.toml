@@ -3,9 +3,8 @@ languageCode = "en-us"
 title = "ISTAROSA INT'L CO., LTD"
 theme = "istarosa"
 
-
 [taxonomies]
-  product = "products"
+  product = "products" 
 
 [[menu.main]]
   name = "Home"

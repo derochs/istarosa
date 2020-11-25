@@ -1,0 +1,44 @@
+{{ define "main" }}
+	<div class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column">
+					<aside class="menu">
+						<p class="menu-label">Categories</p>
+						<ul class="menu-list">
+							<li><a class="is-active" href="{{ .Permalink }}">All</a></li>
+							{{ range .Pages }}
+							<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+							{{ end }}
+						</ul>
+					</aside>
+				</div>
+				<div class="column is-three-quarters">
+					<div class="columns is-mobile is-multiline">
+						{{ range $key, $taxonomy := .Site.Taxonomies.products }}
+							{{ range $taxonomy.Pages }}
+								<div class="column is-half-mobile is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd product-column">
+									<a href="{{ .Permalink }}">
+										<div class="box product">
+											<figure class="image">
+												{{ with .Params.images }}
+													<img src="{{ index . 0 }}">
+												{{ end }}
+											</figure>
+											{{ if ne .Params.itemno ""}}
+											<span class="tag is-black">No. {{ .Params.itemno }}</span>
+											{{ else }}
+											<span class="tag is-black">No number</span>
+											{{ end }}
+											<h1 class="title is-7 product-title">{{ .Title }}</h1>
+										</div>
+									</a>
+								</div>
+							{{ end }}
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{ end }}
