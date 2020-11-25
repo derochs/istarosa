@@ -45,6 +45,7 @@ fields:
   label: Product Category
   description: Select the product category
 pages:
+- content/products/other-pet-care/ear-cleansing-solution-ear-wash.md
 - content/products/pet-shampoo/never-greasy-stinky-dog-shampoo.md
 - content/products/skin-care/anti-aging-24k-gold-collagen-hydrogel-facial-mask.md
 - content/products/skin-care/bamboo-charcoal-collagen-mask.md
