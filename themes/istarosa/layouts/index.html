@@ -1,26 +1,88 @@
-{{ define "main" }}
-<section class="hero is-medium main-hero">
-	<div class="hero-body">
-		<div class="container">
-			<h1 class="title">ISTAROSA INT’L CO. LTD</h1>
-			<h2 class="subtitle">Leading enterprise engaged in beauty and hair care products</h2>
-		</div>		
-	</div>	
-</section>
-<section class="section">
-	<div class="container">
-		<p>
-			ISTAROSA INT’L CO. LTD., belongs to TRANWIN INT’L GROUP, operating since 1986. We shop worldwide.
-		</p>
-		<p>
-			We are one of the leading enterprises engaged in the various BEAUTY and HAIR CARE PRODUCTS. With stable quality, our products are well received by all of our customers around the world.
-		</p>
-		<p>
-			We are willing to build up business relationships with our customers on the mutual benefits, certainly will also receive our prompt and professional services at all times.
-		</p>
-		<p class="has-text-weight-bold">
-			Contact us today for further details on how we can be of service to You and Your company needs.
-		</p>
-	</div>
-</section>
-{{ end }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body>
+        <header>
+        	<section class="hero hero-home is-fullheight">
+				<!-- Hero head: will stick at the top -->
+				<div class="hero-head">
+				<nav class="navbar">
+				  <div class="container">
+				    <div class="navbar-brand">
+				      <a class="navbar-item">
+				        <img src="/images/header.png" alt="Logo">
+				      </a>
+				      <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+				        <span></span>
+				        <span></span>
+				        <span></span>
+				      </span>
+				    </div>
+				    <div id="navbarMenuHeroA" class="navbar-menu">
+				      <div class="navbar-end">
+				      	{{ range .Site.Menus.main.ByWeight }}
+				      		<a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
+				      	{{ end }}
+				      	{{ range .Site.Menus.special }}
+							<div class=navbar-item>
+								<field>
+									<div class="field">
+									    <p class="control">
+									      <a id="contact-button" class="button is-rounded special" href="{{ .URL }}">
+									        <span>{{ .Name }}</span>
+									      </a>
+									    </p>
+									  </div>
+								</field>
+							</div>
+						{{ end }}
+				      </div>
+				    </div>
+				  </div>
+				</nav>
+				</div>
+
+				<!-- Hero content: will be in the middle -->
+				<div class="hero-body">
+					<div class="container">
+						<div class="columns">
+							<div class="column is-one-third">
+						  		<div class="hero-content">
+						  			<h1 class="title has-text-centered">{{ .Site.Title }}</h1>
+						  			<h2 class="subtitle has-text-centered is-uppercase">Beauty and Hair Care Products</h2>
+						  		</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				$(document).ready(function () {
+					$(".navbar-burger").click(function () {
+						$(".navbar-burger").toggleClass("is-active");
+						$(".navbar-menu").toggleClass("is-active");
+					})
+				})
+			</script>
+        </header>
+        <main id="content">
+        	<section class="section">
+				<div class="container">
+					<p>
+						ISTAROSA INT’L CO. LTD., belongs to TRANWIN INT’L GROUP, operating since 1986. We shop worldwide.
+					</p>
+					<p>
+						We are one of the leading enterprises engaged in the various BEAUTY and HAIR CARE PRODUCTS. With stable quality, our products are well received by all of our customers around the world.
+					</p>
+					<p>
+						We are willing to build up business relationships with our customers on the mutual benefits, certainly will also receive our prompt and professional services at all times.
+					</p>
+					<p class="has-text-weight-bold">
+						Contact us today for further details on how we can be of service to You and Your company needs.
+					</p>
+				</div>
+			</section>
+        </main>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
