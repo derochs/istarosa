@@ -82,6 +82,7 @@ main {
 	padding-bottom: 3em !important;
 	padding-left: 1.5em !important;
 	padding-right: 1.5em !important;
+	border-radius: 1em !important;
 }
 
 .hero-content h1, .hero-content h2 {
